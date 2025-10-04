@@ -1,0 +1,19 @@
+# Tarea: Trabajo con Archivos de Texto en Python
+
+# --- Escritura de archivo ---
+# Creamos el archivo my_notes.txt y escribimos tres notas personales
+with open("my_notes.txt", "w") as file:
+    file.write("Hoy desayuné pan con café antes de estudiar.\n")
+    file.write("Me gusta escuchar música mientras hago las tareas.\n")
+    file.write("Quiero aprender a usar mejor GitHub paso a paso.\n")
+
+# --- Lectura de archivo ---
+# Abrimos el archivo en modo lectura y mostramos el contenido línea por línea
+with open("my_notes.txt", "r") as file:
+    line = file.readline()
+    while line:
+        print(line.strip())  # strip() elimina los saltos de línea extra
+        line = file.readline()
+
+# Nota:
+# El uso de 'with open' asegura que los archivos se cierren automáticamente
